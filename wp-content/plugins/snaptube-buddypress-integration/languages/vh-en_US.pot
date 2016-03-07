@@ -1,0 +1,224 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress Video Gallery BuddyPress Integration v1.6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-09-14 09:45:57+0000\n"
+"Last-Translator: smaids <sprincis.janis@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%100/10==1 ? 2 : n%10==1 ? 0 : (n+9)%10>3 ? 2 : 1;\n"
+"X-Generator: Poedit 1.8.3\n"
+"X-Poedit-Language: \n"
+"X-Poedit-Country: \n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: lib/functions/general.php:55
+#@ default
+msgid "Links"
+msgstr "Ссылки"
+
+#: lib/functions/page-template.php:95
+#@ vh
+msgid "Submit a video"
+msgstr "Добавить видео"
+
+#: lib/functions/templates/template-submit-video.php:84
+#@ vh
+msgid "This plugin is add-on for WordPress Video Gallery plugin, please install and activate it before you can use this one. You can get it here "
+msgstr "Установите плагин и активируйте его. Скачать его вы можете здесь."
+
+#: lib/functions/templates/template-submit-video.php:349
+#@ vh
+msgid "Title / Name"
+msgstr "Заголвок / Название"
+
+#: lib/functions/templates/template-submit-video.php:356
+#@ vh
+msgid "Description"
+msgstr "Описание"
+
+#: lib/functions/templates/template-submit-video.php:372
+#: lib/functions/templates/template-submit-video.php:373
+#@ vh
+msgid "Add video"
+msgstr "Добавить видео"
+
+#: lib/functions/templates/template-submit-video.php:379
+#@ vh
+msgid "Categories"
+msgstr "Категории"
+
+#: lib/functions/templates/template-submit-video.php:409
+#@ vh
+msgid "here"
+msgstr "здесь"
+
+#: lib/functions/videosController.php:212
+#@ hdflvvideoshare
+msgid "Could not retrieve Youtube video information"
+msgstr "Не удалось получить информацию с YouTube видео"
+
+#: lib/widgets/twitter/twitter.php:12
+#@ vh
+msgid "Displays a twitter feed"
+msgstr "Отобразить ленту twitter"
+
+#: lib/widgets/twitter/twitter.php:19
+#@ vh
+msgid "Recent Tweets"
+msgstr "Свежие Tweets"
+
+#: lib/widgets/twitter/twitter.php:57
+#, php-format
+#@ vh
+msgid "about %d seconds ago"
+msgstr "%d секунд назад"
+
+#: lib/widgets/twitter/twitter.php:58
+#@ vh
+msgid "about a minute ago"
+msgstr "минуту назад"
+
+#: lib/widgets/twitter/twitter.php:59
+#, php-format
+#@ vh
+msgid "about %d minutes ago"
+msgstr "%d минут назад"
+
+#: lib/widgets/twitter/twitter.php:60
+#@ vh
+msgid "about an hour ago"
+msgstr "час назад"
+
+#: lib/widgets/twitter/twitter.php:61
+#, php-format
+#@ vh
+msgid "about %d hours ago"
+msgstr "%d часов назад"
+
+#: lib/widgets/twitter/twitter.php:62
+#@ vh
+msgid "about a day ago"
+msgstr "вчера"
+
+#: lib/widgets/twitter/twitter.php:63
+#, php-format
+#@ vh
+msgid "about %d days ago"
+msgstr "%d дней назад"
+
+#: lib/widgets/twitter/twitter.php:92
+#@ vh
+msgid "Title:"
+msgstr "Заголовок:"
+
+#: lib/widgets/twitter/twitter.php:96
+#@ vh
+msgid "Usernames (separate with comas):"
+msgstr "Логин (через запятую):"
+
+#: lib/widgets/twitter/twitter.php:100
+#@ vh
+msgid "height and width of avatar if displayed (54px max)(optional)"
+msgstr "высота и ширина аватара (54px максимум)(опция)"
+
+#: lib/widgets/twitter/twitter.php:104
+#@ vh
+msgid "How many tweets to display?"
+msgstr "Сколько tweets отображать в ленте?"
+
+#: lib/functions/templates/template-submit-video.php:120
+#@ video_gallery
+msgid "YouTube URL / Viddler / Dailymotion"
+msgstr ""
+
+#: lib/functions/templates/template-submit-video.php:123
+#@ video_gallery
+msgid "Upload file"
+msgstr ""
+
+#: lib/functions/templates/template-submit-video.php:128
+#@ video_gallery
+msgid "Video URL"
+msgstr ""
+
+#: lib/functions/templates/template-submit-video.php:135
+#@ video_gallery
+msgid "Generate details"
+msgstr ""
+
+#: lib/functions/templates/template-submit-video.php:194
+#@ video_gallery
+msgid "Supported video formats:"
+msgstr ""
+
+#: lib/functions/templates/template-submit-video.php:194
+#@ video_gallery
+msgid "(  MP4, M4V, M4A, MOV, Mp4v or F4V )"
+msgstr ""
+
+#: lib/functions/templates/template-submit-video.php:200
+#: lib/functions/templates/template-submit-video.php:205
+#@ video_gallery
+msgid "Upload Video"
+msgstr ""
+
+#: lib/functions/templates/template-submit-video.php:223
+#: lib/functions/templates/template-submit-video.php:251
+#: lib/functions/templates/template-submit-video.php:281
+#: lib/functions/templates/template-submit-video.php:310
+#@ video_gallery
+msgid "Upload Failed:"
+msgstr ""
+
+#: lib/functions/templates/template-submit-video.php:223
+#: lib/functions/templates/template-submit-video.php:251
+#: lib/functions/templates/template-submit-video.php:281
+#: lib/functions/templates/template-submit-video.php:310
+#@ video_gallery
+msgid "User Cancelled the upload"
+msgstr ""
+
+#: lib/functions/templates/template-submit-video.php:229
+#@ video_gallery
+msgid "Upload HD Video ( Optional )"
+msgstr ""
+
+#: lib/functions/templates/template-submit-video.php:257
+#@ video_gallery
+msgid "Upload Thumb Image"
+msgstr ""
+
+#: lib/functions/templates/template-submit-video.php:287
+#@ video_gallery
+msgid "Upload Preview Image ( Optional )"
+msgstr ""
+
+#: lib/functions/templates/template-submit-video.php:319
+#@ video_gallery
+msgid "Please upload a video"
+msgstr ""
+
+#: lib/functions/templates/template-submit-video.php:322
+#@ video_gallery
+msgid "Please upload a video thumbnail"
+msgstr ""
+
+#: lib/functions/templates/template-submit-video.php:409
+#@ vh
+msgid "You need to be logged in to submit a video. Register your account "
+msgstr ""
+
+#: lib/widgets/twitter/twitter.php:14
+#@ vh
+msgid "Snaptube - Twitter"
+msgstr ""
+

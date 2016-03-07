@@ -1,0 +1,167 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress Video Gallery BuddyPress Integration v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-09-16 07:53:31+0000\n"
+"Last-Translator: smaids <sprincis.janis@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: lib/functions/general.php:55
+#@ default
+msgid "Links"
+msgstr ""
+
+#: lib/functions/page-template.php:95
+#@ plugin
+msgid "Submit a video"
+msgstr ""
+
+#: lib/functions/templates/template-submit-video.php:84
+#@ vh
+msgid "This plugin is add-on for WordPress Video Gallery plugin, please install and activate it before you can use this one. You can get it here "
+msgstr ""
+
+#: lib/functions/templates/template-submit-video.php:94
+#@ vh
+msgid "YouTube / Viddler / Dailymotion URL"
+msgstr ""
+
+#: lib/functions/templates/template-submit-video.php:105
+#@ vh
+msgid "It accepts Youtube links like : https://www.youtube.com/watch?v=9bZkp7q19f0"
+msgstr ""
+
+#: lib/functions/templates/template-submit-video.php:132
+#@ vh
+msgid "Title / Name"
+msgstr ""
+
+#: lib/functions/templates/template-submit-video.php:139
+#@ vh
+msgid "Description"
+msgstr ""
+
+#: lib/functions/templates/template-submit-video.php:141
+#@ vh
+msgid "Tags / Keywords"
+msgstr ""
+
+#: lib/functions/templates/template-submit-video.php:156
+#@ vh
+msgid "Add video"
+msgstr ""
+
+#: lib/functions/templates/template-submit-video.php:161
+#@ vh
+msgid "Categories"
+msgstr ""
+
+#: lib/functions/templates/template-submit-video.php:191
+#@ vh
+msgid "You need to be logged in to submit a video. Register you account "
+msgstr ""
+
+#: lib/functions/templates/template-submit-video.php:191
+#@ vh
+msgid "here"
+msgstr ""
+
+#: lib/functions/videosController.php:197
+#: lib/functions/videosController.php:398
+#@ vh
+msgid "Could not retrieve Youtube video information"
+msgstr ""
+
+#: lib/functions/videosController.php:401
+#@ vh
+msgid "URL entered is not a valid Youtube Url"
+msgstr ""
+
+#: lib/widgets/twitter/twitter.php:12
+#@ vh
+msgid "Displays a twitter feed"
+msgstr ""
+
+#: lib/widgets/twitter/twitter.php:14
+#@ vh
+msgid "Snaptube - Twitter"
+msgstr ""
+
+#: lib/widgets/twitter/twitter.php:19
+#@ vh
+msgid "Recent Tweets"
+msgstr ""
+
+#: lib/widgets/twitter/twitter.php:57
+#, php-format
+#@ vh
+msgid "about %d seconds ago"
+msgstr ""
+
+#: lib/widgets/twitter/twitter.php:58
+#@ vh
+msgid "about a minute ago"
+msgstr ""
+
+#: lib/widgets/twitter/twitter.php:59
+#, php-format
+#@ vh
+msgid "about %d minutes ago"
+msgstr ""
+
+#: lib/widgets/twitter/twitter.php:60
+#@ vh
+msgid "about an hour ago"
+msgstr ""
+
+#: lib/widgets/twitter/twitter.php:61
+#, php-format
+#@ vh
+msgid "about %d hours ago"
+msgstr ""
+
+#: lib/widgets/twitter/twitter.php:62
+#@ vh
+msgid "about a day ago"
+msgstr ""
+
+#: lib/widgets/twitter/twitter.php:63
+#, php-format
+#@ vh
+msgid "about %d days ago"
+msgstr ""
+
+#: lib/widgets/twitter/twitter.php:92
+#@ vh
+msgid "Title:"
+msgstr ""
+
+#: lib/widgets/twitter/twitter.php:96
+#@ vh
+msgid "Usernames (separate with comas):"
+msgstr ""
+
+#: lib/widgets/twitter/twitter.php:100
+#@ vh
+msgid "height and width of avatar if displayed (54px max)(optional)"
+msgstr ""
+
+#: lib/widgets/twitter/twitter.php:104
+#@ vh
+msgid "How many tweets to display?"
+msgstr ""
+
