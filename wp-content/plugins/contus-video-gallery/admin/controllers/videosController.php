@@ -115,6 +115,7 @@ if ( !class_exists ( 'VideoController' ) ) {
        */
       public function redirectVideosPage ( $statusFlag, $action, $type ) {
         /** Redirect to videos page based on the status */
+          
         if (! $statusFlag && $action != 'status' && $action == 'featured' ) {
           /** For videos unsuccess action */
           /** Check action is update */
@@ -129,7 +130,12 @@ if ( !class_exists ( 'VideoController' ) ) {
           /** For videos success action */
           if($action == 'update') {
             $url = 'admin.php?page=video&videoId=' . $this->_videoId . '&' . $action .'=1';
-          } else{
+          } else if ($type == true) {
+            // echo 'should go back to add? ' . $type;
+            // exit;
+
+            $url = 'edit.php?post_status=pending&post_type=wpvr_video';
+          } else {
             $url = 'admin.php?page=video&' . $action .'=1';
           }
         }

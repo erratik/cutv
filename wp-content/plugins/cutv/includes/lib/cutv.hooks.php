@@ -10,11 +10,12 @@
 	//    CUTV HOOKS
 	//*****************************************************************/
 
-	add_action( 'wp_ajax_save_as_vg', 'wpse_126886_ajax_handler' );
+	add_action( 'wp_ajax_cutv_channel_link', 'wpse_126886_ajax_handler' );
 	// add_action( 'wp_ajax_admin_enqform', 'wpse_126886_ajax_handler' );
 
 	function wpse_126886_ajax_handler() {
 
+        $playlists = get_post_meta($_POST['id'], 'cote', true);
 		// if(isset($_POST['submitted'])) {    //validations 
 
 		//     if(trim($_POST['firstname']) === '') {
@@ -191,3 +192,6 @@
 		    exit; // important
 		// }
 	}
+
+
+    

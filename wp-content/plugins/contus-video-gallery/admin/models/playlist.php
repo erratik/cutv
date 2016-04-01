@@ -37,9 +37,21 @@ if ( !class_exists ( 'PlaylistModel' ) ) {
        */
       public function insert_playlist($playlsitData) {
         /** Insert new playlist data */
-        if ($this->_wpdb->insert ( $this->_playlisttable, $playlsitData )) {
-          /** If data is inserted return last inserted playlist id */
-          return $this->_wpdb->insert_id;
+        $id = wp_create_category($playlsitData['playlist_name'], 304);
+        if ($id) {
+          
+          if ($this->_wpdb->insert ( $this->_playlisttable, $playlsitData )) {
+
+            // echo "<p>".$this->_wpdb->insert_id."</p>";
+            $updated =  $this->_wpdb->query ( 'UPDATE ' . $this->_playlisttable . ' SET `pid`='.$id.' WHERE pid IN (' . $this->_wpdb->insert_id . ')' );
+            // print_r($updated);
+            // exit;
+            // If data is inserted return last inserted playlist id 
+            return $this->_wpdb->insert_id;
+
+
+          }
+          
         }
       }
       /**
@@ -49,6 +61,16 @@ if ( !class_exists ( 'PlaylistModel' ) ) {
        * @param unknown $playlistId
        */
       public function playlist_update($playlistData, $playlistId) {
+
+        $updated_category = wp_update_term($playlistId, 'category', array(
+          'name' => $playlistData['playlist_name'],
+          'slug' => $playlistData['playlist_slugname']
+        ));
+
+
+        // echo "<p>".$updated_category."</p>";
+        // print_r($playlistData); exit;
+
         /** Update playlist data and Return upate value */
         return $this->_wpdb->update ( $this->_playlisttable, $playlistData, array ( 'pid' => $playlistId ) );
       }

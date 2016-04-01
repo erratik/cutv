@@ -402,6 +402,8 @@
 		// var_dump($catsArray);
 		// exit;
 
+		// TODO: Tay - global variable for admin urls
+
 		$meta_boxes[] = array(
 			'id'         => 'wpvr_source_posting_metabox' ,
 			'title'      => '<i class="fa fa-cloud-upload"></i> ' . __( 'Source Posting Options' , WPVR_LANG ) ,
@@ -432,7 +434,7 @@
 				) ,
 				array(
 					'name'         => __( 'Post to' , WPVR_LANG ) ,
-					'desc'         => '<a href="/cutv/wp-admin/admin.php?page=playlist" target="_blank">' .
+					'desc'         => '<a href="/wp-admin/admin.php?page=playlist" target="_blank">' .
 					                  __( 'Edit or Add the Categories' , WPVR_LANG ) .
 					                  '</a>'
 					,

@@ -23,7 +23,7 @@ if ( LAYOUT == 'sidebar-no' ) {
 		vh_get_suggested_videos($suggested_videos);
 		?>
 		<div class="<?php echo LAYOUT; ?>-pull">
-			<div class="main-content <?php echo (LAYOUT != 'sidebar-no') ? 'vc_col-sm-9' : 'vc_col-sm-10'; ?>">
+			<div class="main-content <?php echo (LAYOUT != 'sidebar-no') ? 'vc_col-sm-7' : 'vc_col-sm-10'; ?>">
 				<?php
 				if ( !is_front_page() && !is_home() ) { ?>
 					<div class="page-title">

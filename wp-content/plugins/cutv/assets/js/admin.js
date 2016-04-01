@@ -16,7 +16,6 @@ jQuery( document ).ready( function ( $ ) {
 			.on('click', '.add-to-snaptube', function(e) {
 				e.preventDefault();
 
-
 				$videoPost = $(this).parents(".iedit");
 				$videoPost.cutv_get_new_videogallery_form($videoPost.find('.video-info').attr('data-youtube-url'));
 
@@ -50,27 +49,38 @@ jQuery( document ).ready( function ( $ ) {
 			// cutv_chkbut();
 			$(this).find('#video_options').prop('id', 'video_options-'+post_id); 
 			var $videoForm = $('#video_options-'+post_id);
+			var $post = $('#post-'+post_id);
+			var $videoInfo = $post.find('.video-info');
+
 			$videoForm.prop('action', '/cutv/wp-admin/'+'admin.php?page=newvideo').siblings().hide(); 
 			$videoForm.find('#adstypebox').hide();
-			$videoForm.find('.form-table:first tr:not(:last)').hide()
+			$videoForm.find('.form-table:first tr:not(:last)').hide();
+			$videoForm.find('.form-table:first tr:eq(2), .form-table:first tr:eq(3)').show();
 			// $(this).html($videoForm);
 
-			$videoForm.find('[name="name"]').val($('#post-'+post_id+' .cutv-video-title').text());
-			$videoForm.find('[name="description"]').val($('#post-'+post_id+' .cutv-video-description').text());
+			$videoForm.find('[name="name"]').val($videoInfo.find('.cutv-video-title').text());
+			$videoForm.find('[name="description"]').val($videoInfo.find('.cutv-video-description').text());
 
 			// $videoForm.append('<input type="hidden" name="image" value="'+$('#post-'+post_id+' .wp-post-image').prop('src')+'">');
 			$videoForm.append('<input type="hidden" name="youtube-value" value="'+youtube_url+'">'); 
-			$videoForm.append('<input type="hidden" name="post_date" value="'+$('#post-'+post_id+' .video-info').data('youtube-postdate')+'">'); 
+			$videoForm.append('<input type="hidden" name="post_date" value="'+$videoInfo.data('youtube-postdate')+'">'); 
+			$videoForm.append('<input type="hidden" name="post_id" value="'+$videoInfo.data('post-id')+'">'); 
+			$videoForm.append('<input type="hidden" name="cutv_add" value="true">'); 
 			$videoForm.append('<input type="checkbox" id="btn2">'); 
-			// $videoForm.find('[name="image"]').val();
 
+			$post.find('[name="tags_name"]').val($videoInfo.data('youtube-tags'));
+
+			$post.find('#playlist-'+$videoInfo.data('cutv-channel')).prop('checked', true);
+			$videoForm.find('.post-body-content').append($videoForm.find('#playlistchecklist'));
+
+			$videoForm.find('.postbox-container-1').remove();
 			document.getElementById('btn2').checked = true;
 			document.getElementById('filepath1').value = youtube_url;
 
 			console.log($videoForm.find('[name="image"]'));
 
 			$('#add-snaptube-modal_'+post_id).html($('#stuff-'+post_id));
-
+			$('#post-'+post_id).find('.thickbox').trigger('click');
 			// $video
 			// $videoForm.submit();
 			// $videoForm.find('[name=""]')

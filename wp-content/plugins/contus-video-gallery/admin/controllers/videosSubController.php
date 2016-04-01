@@ -150,7 +150,7 @@ if ( !class_exists ( 'VideosPageSubController' ) ) {
      *
      * @param array $videoData
      */
-    public function addUpdateVideoData ($videoData) {
+    public function addUpdateVideoData ($videoData, $cutv_add) {
       $subtitle1 = $subtitle2 = $new_subtitle1 = $new_subtitle2 = $sub_title1 = $sub_title2 = NULL;
       /** Get subtitle1form-value from params */
       $subtitle1 = filter_input ( INPUT_POST, 'subtitle1form-value' );
@@ -167,8 +167,7 @@ if ( !class_exists ( 'VideosPageSubController' ) ) {
       $videoData ['subtitle_lang2'] = $subtitle_lang2;
       /** For video edit action */
 
-      print_r($videoData);
-      // exit;
+
 
       if ($this->_videoId) {
         /**
@@ -201,6 +200,7 @@ if ( !class_exists ( 'VideosPageSubController' ) ) {
       else {
         /** Adding video else starts */
         $insertflag = $this->insert_video ( $videoData ); 
+
         /** Check video is inserted and id ix exist */
         if ($insertflag != 0) {
           /** Rename srt files in videogallery folder
@@ -233,8 +233,12 @@ if ( !class_exists ( 'VideosPageSubController' ) ) {
          * Adding video else ends
          * Redirect to all videos page
          */
-      
-        $this->redirectVideosPage ( $insertflag, 'add', '');
+          // print_r($videoData ['slug']);
+      // echo 'this post was updated through wpdb?!';
+      // exit;
+
+        
+        $this->redirectVideosPage ( $insertflag, 'add', filter_input ( INPUT_POST, 'cutv_add' ));
       }
     }
     
@@ -623,9 +627,28 @@ if ( !class_exists ( 'VideosSubController' ) ) {
         if (empty ( $this->_videoId )) {
           $videoData ['ordering'] = getAllVideosCount ();
           $videoData ['slug']     = $videoData ['srtfile1'] = $videoData ['srtfile2'] = $videoData ['subtitle_lang1'] = $videoData ['subtitle_lang2'] = '';
+
+        //   echo 'testing!';
+        // print_r(filter_input ( INPUT_POST, 'post_id' ));
+
+        global $wpdb;
+        $result = $wpdb->update(
+          $wpdb->posts,
+          array( 'post_status' => 'trash' ),
+          array( 'ID' => filter_input ( INPUT_POST, 'post_id' ) )
+        );
+
+          // $this->_wpdb->query ( ' UPDATE ' . $this->_wpdb->prefix . 'posts SET post_status = "trash"  WHERE id = ' . filter_input ( INPUT_POST, 'post_id' ) );
+
+    // $results = $this->_wpdb->query( 'SELECT * FROM ' . $this->_wpdb->prefix . 'posts WHERE id = ' . filter_input ( INPUT_POST, 'post_id' ), OBJECT );
+
+        // print_r($results);
+        // exit;
+
+    
         } 
         /** Call funtion to perform add / update action */
-        $this->addUpdateVideoData ( $videoData);
+        $this->addUpdateVideoData ( $videoData, filter_input ( INPUT_POST, 'cutv_add' ));
       }
     }
   /** VideosSubController class ends  */

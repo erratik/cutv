@@ -451,13 +451,28 @@
 				$videoTitle = $videoData->post_title;
 				$video_youtube_preview = get_post_meta( $post->ID , 'wpvr_video_service_thumb' , TRUE );
 				$video_youtube_post_date = get_post_meta( $post->ID , 'wpvr_video_service_date' , TRUE );
-				// print_r($videoData);
+
+				$array = array('lastname', 'email', 'phone');
+				$videoTags = get_the_tags($post->ID);
+
+				foreach ($videoTags as $tag) {
+
+					foreach ($tag as $key => $value) {
+					
+						if ($key == 'name') $video_youtube_tags[] = $value;
+
+					}
+				}
+				
+				$cats = get_the_category($post->ID);
+				$cutv_playlist = $cats[0]->term_taxonomy_id;
 
 				if( $video_views == '' ) $video_views = 0;
 
 
 				?>
-				<div class="video-info" data-youtube-url="<?php echo $video_youtube_url; ?>" data-youtube-preview="<?php echo $video_youtube_preview; ?>" data-youtube-postdate="<?php echo $video_youtube_post_date; ?>">
+
+				<div class="video-info" data-youtube-url="<?php echo $video_youtube_url; ?>" data-youtube-preview="<?php echo $video_youtube_preview; ?>" data-youtube-postdate="<?php echo $video_youtube_post_date; ?>" data-cutv-channel="<?php echo $cutv_playlist; ?>"  data-youtube-tags="<?php echo implode(",", $video_youtube_tags); ?>" data-post-id="<?php echo $post->ID; ?>">
 
 					<?php if( $service != '' ) { ?>
 						<div class = "wpvr_center wpvr_service_icon <?php echo $service; ?>">
@@ -469,6 +484,7 @@
 						<div class = "snaptube-info" style="display: none;">
 							<div class="cutv-video-title"><?php echo $videoTitle; ?></div>
 							<div class="cutv-video-description"><?php echo $videoDescription; ?></div>
+							<!-- <div class="cutv-video-tags"><?php echo $videoDescription; ?></div> -->
 						</div>
 					<?php } ?>
 
@@ -586,6 +602,10 @@
 	add_filter( 'wp_insert_post_data' , 'wpvr_manual_add_function' , '99' , 2 );
 	function wpvr_manual_add_function( $data , $postarr ) {
 		global $wpvr_vs , $wpvr_imported;
+
+		// print_r($data);
+		// print_r($postarr);
+		// exit;
 		
 		$post_id = $postarr[ 'ID' ];
 
